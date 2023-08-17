@@ -1,0 +1,197 @@
+
+body {
+	background-color: #f2f2f2;
+}
+
+div.mainNavDiv, div.home, div.image_gallery, div.contact, div.about {
+	border: 1px solid black;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: #c2c2c2;
+} 
+
+div.mainNavDiv {
+	background-color:#c2c2c2;
+	max-width : 404px;
+}
+ul.navbar {
+	list-style-type:none;
+	display:block;
+	margin:auto;
+	padding:0;
+	overflow:hidden;
+}
+li.navitem {
+	margin:auto;
+	display:block;
+	width:25%;
+	float:left;
+	border-right: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+}
+li a:hover {
+	background-color: #808080
+}
+a.navlink {
+	display:block;
+	padding:8px;
+	background-color: #dddddd;
+	text-decoration: none;
+	text-align: center;
+}
+img.navlogo {
+	display:block;
+	margin:auto;
+}
+#home {
+	width:60%;
+	text-align: center;
+}
+
+/*###########################*/
+/*all code below is lifted from w3schools editor and works*/
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* end plagerised code */
+
+
+
+/* set up the default settings for each element */
+div.overlay_text a{
+	color: white;
+	text-decoration: none;
+}
+div.overlay {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+div.overlay_text {
+	background-color: #808080;
+	padding: 8px 16px;
+}
+
+div.responsive img {
+	opacity: 1;
+}
+div.gallery>img {
+	transition: 0.5s ease;
+	opacity: 1;
+	backface-visibility: hidden;
+}
+div.responsive {
+	position: relative;
+}
+
+/* on hover change opacity of he two items */
+div.gallery:hover img.img_target {
+	opacity: 0.3;
+}
+div.gallery:hover .overlay {
+	opacity: 1;
+}
+
+/* contact form css:: */
+#contact {
+	max-width: 50%;
+	min-width: 50%;
+	margin: auto;
+}
+
+.contact_heading {
+	margin:auto;
+	text-align: center;
+}
+
+form {
+	max-width: 85%;
+	margin: auto;
+	padding: 10px;
+	background-color: #dddddd;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+form>p {
+	text-align: center;
+}
+
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
+  
+  div {
+	border-radius: 5px;
+	padding: 8px;
+  }
+
+  .form_submit_button {
+	padding-left: 25%;
+	padding-right: 25%;
+  }
+
+div.about {
+	text-align: center;
+	width:300px;
+}
