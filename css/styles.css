@@ -1,13 +1,13 @@
 
 body {
-	background-color: #f2f2f2;
+	background-color: #2e2e2e;
 }
 
-div.mainNavDiv, div.home, div.image_gallery, div.contact, div.about {
-	border: 1px solid black;
+div.mainNavDiv, div.home, div.image_gallery, div.contact, div.about, #lightboxContainer {
 	margin: auto;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	border: 1px solid black;
 	background-color: #c2c2c2;
 } 
 

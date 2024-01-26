@@ -2,8 +2,9 @@
 <html lang="en_us">
 	<head>
 		<meta charset = "utf-8">
-		<title>Thrive Fitness | Resort</title>
-		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<title>Thrive Fitness</title>
+		<link rel="stylesheet" href="./css/styles.css" type="text/css">
+		<link rel="stylesheet" href="./css/lightboxStyling.css" type="text/css">
 	</head>
 
 	<body>
@@ -24,18 +25,24 @@
 		<!--HOME-->
 		<div id = "home" class = "home">
 			<h1>Welcome to Thrive Fitness</h1>
-			<p>Thrive Fitness is Charleville's newest and fasest growing gym. Located on Bakers road, this state of the are facility is only a 5 minute walk from the town centre.</p>
-		</div>
-
-		<div>
-			<p><strong>Added a new paragraph</strong></p>
-			<p>Added another new paragraph</p>
+			<p>Thrive Fitness is Charleville's newest and fasest growing gym. Located on Bakers road, this state of the art facility is only a 5 minute walk from the town centre.</p>
 		</div>
 		<!---END HOME-->
 
 		<!--GALLERY-->
+		<!-- OLD GALLERY \/ \/ \/ \/ \/
 		<div id="gallery" class="image_gallery">
-			<!--
+			
+			<div class="responsive">
+				<div class="gallery">
+					<img class = "img_target" src="./images/thumb/eq0.jpg" alt="Gym Equipment">
+					<div class="overlay">
+						<div class="overlay_text"><a target = "_blank" href = "./images/thumb/eq12.jpg"> Click to enlarge </a></div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
 			<div class="responsive">
 				<div class="gallery">
 					<img class = "img_target" src="./images/thumb/eq1.jpg" alt="Gym Equipment">
@@ -44,7 +51,6 @@
 					</div>
 				</div>
 			</div>
-			-->
 
 			<div class="responsive">
 				<div class="gallery">
@@ -135,21 +141,36 @@
 					</div>
 				</div>
 			</div>
-			
-			<div class="responsive">
-				<div class="gallery">
-					<img class = "img_target" src="./images/thumb/eq12.jpg" alt="Gym Equipment">
-					<div class="overlay">
-						<div class="overlay_text"><a target = "_blank" href = "./images/thumb/eq12.jpg"> Click to enlarge </a></div>
-					</div>
+
+		</div>
+		
+		OLD GALLERY /\ /\ /\ /\ /\ -->
+
+		<!-- New lightbox based gallery-->
+
+		<div id="lightboxContainer">
+		</div>
+
+		
+		<div id="modal">
+			<span class="close cursor" onclick="CloseSlideShow()">&times;</span>
+			<div id="slideContent">
+				<div id="slidesGoHere">
+				</div>
+				<a class="prev" onclick="PrevSlide()">&#10094;</a>
+				<a class="next" onclick="NextSlide()">&#10095;</a>
+				<div class="caption-container">
+				  <p id="caption"></p>
+				</div>
+				<div id="thumbnailsGoHere">
 				</div>
 			</div>
-			<div class="clearfix"></div>
 		</div>
+
 		<!--END GALLERY-->
 
 		<!--RSVP-->
-		<div id = "contact" class="contact">
+		<div id="contact" class="contact">
 			<div class="contact_heading">
 				<h1>Reservations</h1>
 				<h2>Begin your fitness journey with Thrive.
@@ -186,10 +207,11 @@
 
 		<!--FOOTER-->
 		<div id="about" class="about">
-			<p>www.thespacestation.space &nbsp;|&nbsp;&copy; 2016</p>
+			<p>www.thrive.gym &nbsp;|&nbsp;&copy; 2024</p>
 		</div>
 		<!--END FOOTER-->
 
+		<script src="./JS/main.js"></script>
 	</body>
 </html>
 

@@ -1,0 +1,43 @@
+.imgContainer {
+	width:300px;
+	height:200px;	
+}
+
+.lbimg, .thumbnail {
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+}
+
+.lbimg:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	opacity: 1.0;
+	transition: 0.3s;
+}
+
+.slideDiv {
+
+}
+
+.slideText {
+
+}
+
+.slideImg {
+	width: 100px;
+	height: 100px;
+}
+
+#lightboxContainer, #thumbnailsGoHere {
+	width: 80%;
+	height:auto;
+
+	display: grid;
+
+	grid-template-columns: [startline] auto [line0] 300px [line00] 10px [line1] 300px [line11] 10px [line2] 300px [line22] 10px [line3] 300px [line33] auto [endline];
+	grid-template-rows:    [startline] auto [line0] 200px [line00] 10px [line1] 200px [line11] auto [endline];
+}
+
+#modal {
+	display: none;
+}
