@@ -153,13 +153,13 @@
 
 		
 		<div id="modal">
-			<span class="close cursor" onclick="CloseSlideShow()">&times;</span>
+			<span id="closeButton" class="cursor lightboxUI" onclick="CloseSlideShow()">&times;</span>
 			<div id="slideContent">
 				<div id="slidesGoHere">
+					<a id="prevButton" class="lightboxUI" onclick="PrevSlide()">&#10094;</a>
+					<a id="nextButton" class="lightboxUI" onclick="NextSlide()">&#10095;</a>
 				</div>
-				<a class="prev" onclick="PrevSlide()">&#10094;</a>
-				<a class="next" onclick="NextSlide()">&#10095;</a>
-				<div class="caption-container">
+				<div id="captionContainer">
 				  <p id="caption"></p>
 				</div>
 				<div id="thumbnailsGoHere">

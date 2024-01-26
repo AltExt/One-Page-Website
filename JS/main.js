@@ -1,3 +1,6 @@
+let CurrentSlide = 0;
+let MaxSlides = 0;
+
 Setup();
 
 function GetElemetByID(ID) {
@@ -17,6 +20,9 @@ function Setup() {
 
 	let rows = 2;
 	let cols = 4;
+
+	MaxSlides = rows * cols;
+	CurrentSlide = 0;
 
 	for (let i = 0; i < rows; i++) {
 		for (let j = 0; j < cols; j++) {
@@ -64,9 +70,14 @@ function Setup() {
 			let thumbImg = document.createElement("img");
 
 			thumbImg.src = src;
+			thumbImg.alt = "Gym equipment " + (n + 1) + ".";
 			thumbImg.className = "thumbnail";
-			thumbImgContainer.className = "thumbImgContainer";
 
+			thumbImg.addEventListener("click", function() {
+				SetSlide(n);
+			});
+			
+			thumbImgContainer.className = "thumbImgContainer";
 			thumbImgContainer.style.gridColumn = "line" + j + " / line" + j + "" + j;
 			thumbImgContainer.style.gridRow = "line" + i + " / line" + i + "" + i;
 
@@ -74,4 +85,49 @@ function Setup() {
 			thumbDiv.appendChild(thumbImgContainer);
 		}
 	}
+}
+
+function OpenSlideShow() {
+	GetElemetByID("modal").style.display = "block";
+}
+
+function CloseSlideShow() {
+	GetElemetByID("modal").style.display = "none";
+}
+
+function SetSlide(n) {
+	CurrentSlide = n;
+	if (CurrentSlide >= MaxSlides) {
+		CurrentSlide = CurrentSlide % MaxSlides;
+	}
+	while (CurrentSlide < 0) {
+		CurrentSlide = MaxSlides + CurrentSlide;
+	}
+	console.log(CurrentSlide);
+	ShowSlides();
+}
+
+function PrevSlide() {
+	SetSlide(CurrentSlide - 1);
+}
+
+function NextSlide() {
+	SetSlide(CurrentSlide + 1);
+}
+
+function ShowSlides() {
+	let slides = document.getElementsByClassName("slideDiv");
+	let thumbnails = document.getElementsByClassName("thumbImgContainer");
+	let captionText = GetElemetByID("caption");
+
+	for (let i = 0; i < slides.length; i++) {
+		slides[i].style.display =  (i == CurrentSlide) ? "block": "none";
+	}
+
+	for (let i = 0; i < thumbnails.length; i++) {
+		thumbnails[i].id = "";
+	}
+
+	thumbnails[CurrentSlide].id = "active";
+	captionText.innerHTML = thumbnails[CurrentSlide].firstChild.alt;
 }
