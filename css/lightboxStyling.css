@@ -87,6 +87,7 @@
 }
 
 #lightboxContainer {
+	width: 80%;
 	height:auto;
 
 	display: grid;
@@ -102,10 +103,6 @@
 
 	grid-template-columns: [startline] auto [line0] 210px [line00] 10px [line1] 210px [line11] 10px [line2] 210px [line22] 10px [line3] 210px [line33] auto [endline];
 	grid-template-rows:    [startline] auto [line0] 140px [line00] 10px [line1] 140px [line11] auto [endline];
-}
-
-#lightboxContainer {
-	width: 80%;
 }
 
 #thumbnailsGoHere {
